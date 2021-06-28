@@ -28,16 +28,11 @@ async function getProjects(){
              'project_name',
              'project_description',
              'project_completed')
-     .where('id',id)
+     .where('project_id',id)
      
-     const formatData=[{
-         project_id:retrieval.project_id,
-         project_name:retrieval.project_name,
-         project_description:retrieval.project_description,
-         project_completed:retrieval.project_completed ? true:false
-     }]
+    
 
-     return formatData
+     return retrieval
  }
 
 
